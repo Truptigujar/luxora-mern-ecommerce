@@ -1,0 +1,7 @@
+/* Top-level app shell. Navbar/Footer render on every route via App.jsx,
+   this file is for layout rules that apply to the whole page shell. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

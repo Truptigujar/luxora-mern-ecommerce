@@ -1,0 +1,145 @@
+.category-hero {
+  height: 380px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  color: var(--ivory);
+}
+
+.category-hero .container {
+  padding-bottom: 48px;
+}
+
+.category-hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin: 10px 0 8px;
+}
+
+.category-hero__subtitle {
+  font-size: 1rem;
+  color: rgba(251, 248, 243, 0.85);
+  max-width: 520px;
+}
+
+.category-body {
+  padding: 48px 48px 100px;
+}
+
+.category-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  background: var(--blush-soft);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+}
+
+.category-tab {
+  background: transparent;
+  font-family: var(--font-utility);
+  text-transform: capitalize;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--charcoal);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+}
+
+.category-tab.is-active {
+  background: var(--category-accent, var(--plum));
+  color: var(--ivory);
+}
+
+.category-count {
+  font-family: var(--font-utility);
+  font-size: 0.82rem;
+  color: var(--grey);
+}
+
+.category-loading {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--grey);
+  font-family: var(--font-utility);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1280px) {
+  .category-body {
+    padding: 40px 36px 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .category-hero {
+    height: 320px;
+  }
+  .category-hero__title {
+    font-size: 2.5rem;
+  }
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .category-body {
+    padding: 36px 28px 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .category-hero {
+    height: 260px;
+  }
+  .category-hero__title {
+    font-size: 2rem;
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .category-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .category-body {
+    padding: 32px 20px 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .category-hero {
+    height: 220px;
+  }
+  .category-hero__title {
+    font-size: 1.6rem;
+  }
+  .category-hero__subtitle {
+    font-size: 0.88rem;
+  }
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .category-tab {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}

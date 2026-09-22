@@ -1,0 +1,5 @@
+/* Page-specific overrides for the Shoes category page.
+   CategoryPage.css reads --category-accent for the active filter tab. */
+.shoes-page {
+  --category-accent: var(--rose);
+}

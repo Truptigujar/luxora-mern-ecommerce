@@ -1,0 +1,8 @@
+/* AuthContext has no markup of its own — it only provides auth state.
+   Shared alert styles used by components that surface auth errors live here
+   so Login.jsx and any future auth-aware UI can reuse the same look. */
+.auth-alert {
+  font-family: var(--font-utility);
+  font-size: 0.82rem;
+  color: var(--rose);
+}

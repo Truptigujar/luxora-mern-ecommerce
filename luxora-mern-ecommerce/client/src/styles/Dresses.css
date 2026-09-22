@@ -1,0 +1,4 @@
+/* Page-specific overrides for the Dresses category page. */
+.dresses-page {
+  --category-accent: var(--gold);
+}

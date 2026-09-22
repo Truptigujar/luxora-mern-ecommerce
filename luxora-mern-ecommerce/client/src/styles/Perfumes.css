@@ -1,0 +1,4 @@
+/* Page-specific overrides for the Perfumes category page. */
+.perfumes-page {
+  --category-accent: var(--gold-light);
+}

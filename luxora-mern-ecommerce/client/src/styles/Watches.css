@@ -1,0 +1,4 @@
+/* Page-specific overrides for the Watches category page. */
+.watches-page {
+  --category-accent: var(--charcoal);
+}

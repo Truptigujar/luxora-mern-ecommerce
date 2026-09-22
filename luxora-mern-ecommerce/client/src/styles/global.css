@@ -1,0 +1,217 @@
+/* =======================================================
+   LUXORA — Design Tokens
+   Display: Cormorant Garamond | Body: Inter | Utility: Jost
+   ======================================================= */
+:root {
+  --ivory: #fbf8f3;
+  --plum: #2b1b2e;
+  --plum-light: #402a44;
+  --blush: #f4d9de;
+  --blush-soft: #fbeef1;
+  --gold: #c9a24b;
+  --gold-light: #e4c874;
+  --rose: #b5495b;
+  --charcoal: #22201f;
+  --grey: #766f6a;
+  --line: #e7e0d8;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+  --font-utility: "Jost", sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 10px 30px rgba(43, 27, 46, 0.08);
+  --shadow-hover: 0 18px 40px rgba(43, 27, 46, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-utility);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: var(--plum);
+  letter-spacing: 0.01em;
+}
+
+.gold-rule {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+  margin-top: 14px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--plum);
+  color: var(--ivory);
+  font-family: var(--font-utility);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: var(--radius-pill);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(43, 27, 46, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--rose);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(181, 73, 91, 0.32);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--plum);
+  border: 1.5px solid var(--plum);
+  font-family: var(--font-utility);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--plum);
+  color: var(--ivory);
+}
+
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--gold-light), var(--gold) 70%);
+  color: var(--plum);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(201, 162, 75, 0.45);
+  flex-shrink: 0;
+}
+
+.page-wrap {
+  min-height: 60vh;
+}
+
+/* =======================================================
+   Responsive breakpoints: 1280 / 1024 / 800 / 500
+   ======================================================= */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 36px;
+  }
+  .section-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 28px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 13px 24px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 20px;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .gold-rule {
+    width: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 20px;
+    font-size: 0.72rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
